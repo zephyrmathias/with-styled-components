@@ -4,7 +4,7 @@ export type ButtonVariant =
   | 'default'
   | 'filled'
 
-export type ButtonStyledProps = Required<Omit<ButtonProps, 'children'>>
+export type ButtonStyledProps = Omit<ButtonProps, 'children'>
 
 export type ButtonProps = {
   variant?: ButtonVariant,

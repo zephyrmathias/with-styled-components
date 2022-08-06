@@ -6,7 +6,7 @@ type ColorOpacity<T extends readonly any[]> = {
 
 const COLOR_OPACITY = [50, 100, 200, 300, 400, 500, 600, 700, 800, 900] as const
 
-export type ColorSchemaType = Record<ColorScheme, ColorOpacity<typeof COLOR_OPACITY>>
+export type ColorSchemaType = Record<Exclude<ColorScheme, 'white'>, ColorOpacity<typeof COLOR_OPACITY>>
 
 export const DEFAULT_COLORS: ColorSchemaType = {
   black: {
